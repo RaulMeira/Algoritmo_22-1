@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13</title>
+</head>
+
+<body>
+    Valor do seu salário bruto:
+    <input id="bruto">
+    <br><br>
+    <button onclick="calculo()"> Calculo do salário a ser recebido</button>
+    <br><br>
+    <span id="mostrar"></span>
+
+</body>
+
+</html>
+<script>
+    function calculo() {
+        var salario = bruto.value
+        var inss = salario * (10 / 100)
+        var ir = salario * (20 / 100)
+        var sind = salario / 30
+        var total = salario - (inss + ir + sind)
+        mostrar.innerHTML = (`<span style="color: blue;"> Apesar de seu bruto ser </span> 
+        <b style="color: green;"> R$ ${salario} </b>, 
+        <span style="color: blue;"> após os descontos, voce receberá somente </span> 
+        <b style="color: red;"> R$ ${total.toFixed(2)} </b>`)
+    }
+
+
+</script>
+
+
