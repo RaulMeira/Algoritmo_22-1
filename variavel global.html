@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Voce já clicou <b id="vezes">0</b> vezes
+    <br><br>
+    <button onclick="contar()">Clique aqui</button>
+    <button onclick="atualizar()">Atualize o contador</button>
+    <button onclick="limpar()">Zerar o conteúdo</button>
+
+</body>
+</html>
+
+<script>
+    var ax_vezes = 0;
+
+    function contar() {
+       ax_vezes++
+        }
+
+    function atualizar() {
+        vezes.innerHTML = ax_vezes
+    }
+    function limpar() {
+        ax_vezes = 0
+    }
+</script>
