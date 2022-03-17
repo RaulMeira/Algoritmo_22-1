@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votos</title>
+</head>
+<body>
+    Quantidade de votos que o Raul teve:
+    <input id="raul">
+    <br><br>
+    Quantidade de votos que o Luan teve:
+    <input id="luan">
+    <br><br>
+    Quantidade de votos brancos que teve:
+    <input id="branco">
+    <br><br>
+    Quantidade de votos nulos que teve:
+    <input id="nulo">
+    <br><br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+    <br><br>
+    <span id="mostrar"></span>
+
+    
+</body>
+</html>
+
+<script>
+     
+    function resultado() {
+        var tot = Number(nulo.value) + Number(branco.value) + Number(raul.value) + Number(luan.value)
+        var ra = (raul.value / tot) * 100
+        var lu = (luan.value / tot) * 100
+        var inv = Number(nulo.value) + Number(branco.value)
+        var totinv = (inv / tot) * 100
+        mostrar.innerHTML = `Total de votos: ${tot} <br>
+
+    Raul: ${ra.toFixed(0)}% (${raul.value} votos) <br> <br>
+    <span style="background-color: blue; height: 30px; width: ${ra}%;"></span> <br>
+
+    Luan: ${lu.toFixed(0)}% (${luan.value} votos) <br>
+    <span style="background-color: green; height: 30px; width: ${lu}%;"></span> <br>
+
+    Inválidos: ${totinv.toFixed(0)}% (${inv} votos) <br>
+    <span style="background-color: pink; height: 30px; width: ${totinv}%;"></span> `
+
+    }
+
+</script>
+
+
+

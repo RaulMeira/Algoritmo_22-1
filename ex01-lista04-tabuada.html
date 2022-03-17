@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    Informe um número para ver a sua tabuada:
+    <input id="numero">
+    <br><br>
+    <button onclick="tab()">Ver Tabuada</button>
+    <br><br>
+    <span id="mostrar"></span>
+</body>
+</html>
+
+<script>
+    
+    function tab() {
+        var num = numero.value
+        var tab1 = num * 1
+        var tab2 = num * 2
+        var tab3 = num * 3
+        var tab4 = num * 4
+        var tab5 = num * 5
+        var tab6 = num * 6
+        var tab7 = num * 7
+        var tab8 = num * 8
+        var tab9 = num * 9
+        mostrar.innerHTML = `${num} x 1 = ${tab1} <br>
+        ${num} x 2 = ${tab2} <br>
+        ${num} x 3 = ${tab3} <br>
+        ${num} x 4 = ${tab4} <br>
+        ${num} x 5 = ${tab5} <br>
+        ${num} x 6 = ${tab6} <br>
+        ${num} x 7 = ${tab7} <br>
+        ${num} x 8 = ${tab8} <br>
+        ${num} x 9 = ${tab9} <br>`
+
+    }
+
+</script>
+  
