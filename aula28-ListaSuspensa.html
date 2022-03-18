@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula28</title>
+</head>
+
+<body>
+    <!-- tag select = lista suspensa/combo box, ex: escolher estado
+        a taga option (sem id) é uma opção do select
+                para pegar é igual um input (com value)
+
+    oq ta no corpo da tag option, é oq aparece p o usuario, o valor do "value" é o valor real
+            do campo da tag select
+    -->
+    <h1>Seleção de humor</h1>
+    Qual o seu humor de manha?
+    <select id="humorManha">
+        <option value="NÃO ENCHE!!!">Péssimo</option>
+        <option value="O que é que voce tem?">Ruim</option>
+        <option value="Oi.">Neutro</option>
+        <option value="Olá meu parsa">Bom</option>
+        <option value="Olá. eu amo viver">Ótimo</option>
+    </select>
+
+    <br><br>
+    Qual o seu humor de tarde?
+    <select id="humorTarde">
+        <option value="NÃO ENCHE!!!">Péssimo</option>
+        <option value="O que é que voce tem?">Ruim</option>
+        <option value="Oi.">Neutro</option>
+        <option value="Olá meu parsa">Bom</option>
+        <option value="Olá. eu amo viver">Ótimo</option>
+    </select>
+<br><br>
+<button onclick="qual()">O que será?</button>
+    <br><br>
+    <span id="mostrar"></span>
+</body>
+
+</html>
+
+<script>
+    function qual() {
+        mostrar.innerHTML = `Quando eu acordo: ${humorManha.value} <br> <br> mas meu humor a tarde é: ${humorTarde.value}`
+    }
+
+</script>
