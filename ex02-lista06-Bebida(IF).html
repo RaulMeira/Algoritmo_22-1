@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refri</title>
+</head>
+
+<body>
+    Quantas latinhas de refrigerante voce toma por dia:
+    <input id="lata">
+    <br>
+    <button onclick="Quanto()">Quantos refris?</button>
+    <br><br>
+    <span id="mostrar"></span>
+    <br><br>
+    <span id="mostrarfinal"></span>
+</body>
+
+</html>
+
+
+<script>
+    function Quanto() {
+        var total = Number(lata.value) * 365
+        if (total > 500) {
+            mostrar.innerHTML = `Cuidado com a diabetes!`
+        }
+    mostrarfinal.innerHTML = `Voce consome ${total} latinhas por ano`
+    }
+
+</script>
