@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNH</title>
+</head>
+
+<body>
+    Qntd de ponto da CNH:
+    <input type="text" id="pontos">
+    <br><br>
+    <button onclick="calculo()">Calcular Multa</button>
+    <br><br>
+    <span id="mostrar"></span>
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var ponto = Number(pontos.value)
+        var multa = 0
+
+        if (ponto >= 20) {
+            mostrar.innerHTML += `Carteira suspensa <br>`
+            multa = ponto * 87
+        }
+        else {
+            multa = ponto * 78
+        }
+        mostrar.innerHTML += `Valor total das multas é R$${multa}`
+    }
+
+</script>

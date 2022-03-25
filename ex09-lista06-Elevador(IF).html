@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+</head>
+
+<body>
+    <h1>ELEVADOR DA <u>SPTECH</u></h1>
+    Quantidade de homens:
+    <input id="homem">
+    <br><br>
+    Quantidade de mulheres:
+    <input id="mulher">
+    <br><br>
+    <button onclick="analise()">Analisar peso</button>
+    <br><br>
+    <span id="mostrar"></span>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function analise() {
+        var macho = homem.value * 80
+        var muie = mulher.value * 60
+        var pesoElev = macho + muie
+        mostrar.innerHTML += `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${pesoElev}kg`
+        if (pesoElev > 800, pesoElev < 1000) {
+            mostrar.innerHTML += `<br><span style="color: blue;"> Será necessário descer alguém para que o elevador se movimente </span>`
+        }
+        if (pesoElev > 1000) {
+            mostrar.innerHTML += `<br> <span style="color: red;"> Será necessário descer alguém para que o elevador se movimente </span>`
+        }
+    }
+</script>

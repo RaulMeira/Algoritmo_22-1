@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conta de Luz</title>
 </head>
 <body>
     Quantidade de kWh consumida por dia:
@@ -13,19 +13,18 @@
     <button onclick="calculo()">Calcular conta de luz</button>
 </body>
 </html>
-o clicar em "calcular conta de luz", calcule o valor da conta no mês (considere mês com 30 dias)
-c) Dê um desconto de 10% somente se a quantidade mensal for menor que 100 kWh
-d) Exiba um alerta com o valor da conta a ser paga
-OBS. Faça o teste de mesa para este exercício.
+
 
 <script>
     function calculo() {
-        var total = Number(qtd.value) * 30
-        var desconto = total - (total * 0,1)
-        if (total < 100) {
-            alert (`Sua conta de Luz é R$${desconto}`)
+        var conta = Number(qtd.value) * 30
+        var KWh = conta * 0.85
+        var desconto = KWh - (KWh * 0.1)
+        alert (`Sua conta de Luz é R$${KWh}`)
+        if (KWh < 100) {
+            alert (`Com o desconto fica R$${desconto}`)
         }
-        alert (`Sua conta de Luz é R$${total}`)
+        
     }
 
 </script>
