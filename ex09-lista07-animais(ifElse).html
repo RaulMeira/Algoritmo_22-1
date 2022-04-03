@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Escolha uma espécie:
+    <select name="" id="especie" onchange="escolheu()">
+        <option value="0">- Escolha uma espécie -</option>
+        <option value="ov">Ovíparos</option>
+        <option value="mam">Mamíferos</option>
+    </select>
+    <br><br>
+    <select name="" id="oviparo" style="display: none;" onchange="funcaoOV()">
+        <option value="escolha">- Escolha um Ovíparo -</option>
+        <option value="ovGal">Galinha</option>
+        <option value="ov_pei">Peixe</option>
+        <option value="ov_tart">Tartaruga</option>
+    </select>
+    <br>
+    <select name="" id="mamifero" style="display: none;" onchange="funcaoMAM()">
+        <option value="esolha2">- Escolha um Mamífero -</option>
+        <option value="mam_ele">Elefante</option>
+        <option value="mam_por">Porco</option>
+        <option value="mam_coe">Coelho</option>
+    </select>
+    <br><br>
+    <img id="foto" src="" alt="" style="height: 250px;">
+    <br><br>
+
+</body>
+
+</html>
+<script>
+    function escolheu() {
+        if (especie.value == 'ov') {
+            oviparo.style.display = `block`;
+        }
+        if (especie.value == 'mam') {
+            mamifero.style.display = `block`
+        }
+    }
+    function funcaoOV () {
+        if (oviparo.value == 'ovGal') {
+                foto.src = "https://super.abril.com.br/wp-content/uploads/2022/01/SI_435_ORCL_Galinha-ovo_site.png";
+            }
+        if (oviparo.value == 'ov_pei') {
+                foto.src = "https://www.infoescola.com/wp-content/uploads/2010/05/peixe-boi_692485741.jpg"
+            }
+        if (oviparo.value == 'ov_tart') {
+                foto.src = "https://www.dicaspetz.com.br/wp-content/uploads/2020/05/como-criar-tartaruga.jpg"
+        }    
+
+    }
+    function funcaoMAM () {
+        if (mamifero.value == 'mam_ele') {
+            foto.src = 'https://www.infoescola.com/wp-content/uploads/2016/12/elefante-asiatico-198685685.jpg'
+        }
+        if (mamifero.value == 'mam_por') {
+            foto.src = 'https://s2.glbimg.com/DJ9TJliDtmrx3Mm52bPXPo7NIIs=/e.glbimg.com/og/ed/f/original/2021/01/06/pexels-barbara-barbosa-4636980.jpg'
+        }
+        if (mamifero.value == 'mam_coe') {
+            foto.src = 'https://blog.cobasi.com.br/wp-content/uploads/2021/01/mini-coelho-capa.png'
+        }
+          
+    }
+</script>
+
+b) Se o usuário escolher o primeiro item, nada acontece e se, eventualmente, tiver algo abaixo da combo, deve
+desaparecer tudo (ver itens a seguir para entender melhor)
+
+e) Após escolher um animal - seja em c), seja em d), uma foto de um exemplar deve aparecer abaixo da combo. Se não for
+escolhido um animal válido (ou seja, se for escolhido o primeiro item da lista), a foto que estive, eventualmente
+aparecendo some. Se nenhum estiver sendo mostrada, continua sem mostrar nada
+f) Também após escolher um animal - seja em c), seja em d), abaixo da imagem descrita em e), deve aparecer um campo de
+texto solicitando o "Valor de compra do animal"
+g) Abaixo do campo em f) deve ter um botão "Calcula imposto". Ao clicar nele, aparecer abaixo uma frase como esta:
+O imposto será de R$X,XX
+Onde X,XX é:
+- Caso ovíparo: %5 do valor de compra
+- Caso mamífero: %10 do valor de compra
+h) Ao lado do botão do item g) deve ter outro botão “Restart” que quando clicado deve mostrar um alert com a frase
+“Valor total de todos os impostos calculados R$ 999,99” e limpar tudo o que está na tela (como se estivesse reiniciado o
+programa).
